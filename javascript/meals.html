@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Card Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffccbc, #d1c4e9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #5ff806;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+        .meal-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            gap: 20px;
+        }
+        .meal-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .meal-card img {
+            width: 100%;
+            border-radius: 15px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .meal-card h2 {
+            margin: 15px 0;
+            font-size: 1.8em;
+            color: #333;
+        }
+        .meal-card p {
+            color: #666;
+            margin: 10px 0 15px;
+            font-size: 1em;
+        }
+        .meal-card button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .meal-card button:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+        .meal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<h1>Choose Your Meal</h1>
+
+<div class="meal-container">
+    <div class="meal-card">
+        <img src="meal1.jpeg" alt="Meal 1">
+        <h2>Meal Option 1</h2>
+        <p>A delicious blend of fresh ingredients and spices.</p>
+        <button>Select</button>
+    </div>
+    <div class="meal-card">
+        <img src="meal2.jpeg" alt="Meal 2">
+        <h2>Meal Option 2</h2>
+        <p>Healthy and nutritious, perfect for any time of day.</p>
+        <button>Select</button>
+    </div>
+    <div class="meal-card">
+        <img src="meal3.jpeg" alt="Meal 3">
+        <h2>Meal Option 3</h2>
+        <p>Indulge in this flavorful and satisfying meal.</p>
+        <button>Select</button>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Demo</title>
+</head>
+<body>
+    <h1>Fetch API Example</h1>
+    <pre id="output"></pre>
+    <script>
+    fetch('https://dummyjson.com/todos')
+        .then(res => res.json())
+        .then(data=> {
+            document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+            console.log(data);
+        })
+        .catch(err => {
+            document.getElementById('output').textContent = 'Error: ' + err; console.error(err);
+        });
+    </script>
+</body>
+</html>

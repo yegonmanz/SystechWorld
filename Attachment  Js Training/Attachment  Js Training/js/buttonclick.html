@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fetch Demo</title>
+</head>
+<body>
+  <h1>Fetch API Demo</h1>
+  <button id="fetchBtn">Fetch Todos</button>
+  <pre id="output"></pre>
+
+  <script>
+    const button = document.getElementById('fetchBtn');
+    const output = document.getElementById('output');
+
+    button.addEventListener('click', () => {
+      output.textContent = 'Loading...';
+      fetch('https://dummyjson.com/todos')
+        .then(res => res.json())
+        .then(data => {
+          output.textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(err => {
+          output.textContent = 'Error: ' + err.message;
+        });
+    });
+  </script>
+</body>
+</html>
